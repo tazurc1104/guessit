@@ -1,11 +1,12 @@
 
 html {
-    background-color: #BBD6B8;
-    font-family: 'Alkatra', cursive;
+    background-color: #03001C;
+    font-family: 'Open Sans', sans-serif;
+    color: #F9F5EB;
 }
 th {
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid #03001C;
 }
 .container {
     position: absolute;
@@ -13,18 +14,18 @@ th {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 30px;
-    background-color: #AEC2B6;
+    background-color: #453C67;
     border-radius: 30px;
   }
 
 table {
-    border: 1px solid #245953;
+    border: 1px solid #03001C;
     text-align: center;
 }
 
-tr, td {
+tr, td, th{
     height: 40px;
-    border: 1px solid black;
+    border: 1px solid #03001C;
 }
 .header {
     text-align: center;
@@ -32,8 +33,8 @@ tr, td {
 button {
     height: 44px;
     width: 44px;
-    font-family: 'Alkatra', cursive;
-    border-radius: 30px;
+    font-family: 'Open Sans', sans-serif;
+    
     background-color: #F9F5EB;
 }
 .screen {
@@ -46,12 +47,36 @@ button {
 }
 .display {
     height: 30px;
-    margin-left: 20px;
-    font-family: 'Alkatra', cursive;
-    border-radius: 30px;
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
     text-align: center;
     background-color: #F9F5EB;
 }
+.display.go, .display.erase {
+    width: 44px;
+    height: 40px;
+}
+
+.buttons {
+    display: grid;
+    text-align: center;
+    grid-gap: 10px;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -62,12 +87,15 @@ button {
 
 @media only screen and (max-width: 600px) {
     html {
-        background-color: #BBD6B8;
-        font-family: 'Alkatra', cursive;
+        background-color: #03001C;
+        font-family: 'Open Sans', sans-serif;
+        color: #F9F5EB;
     }
     th {
-        padding: 20px;
-        border: 1px solid black;
+        padding: 10px;
+        border: 1px solid #03001C;
+        height: 10px;
+        font-size: 15px;
     }
     .container {
         position: absolute;
@@ -75,48 +103,58 @@ button {
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 30px;
-        background-color: #AEC2B6;
+        background-color: #453C67;
         border-radius: 30px;
       }
     
     table {
-        border: 1px solid #245953;
+        border: 1px solid #03001C;
         text-align: center;
     }
     
-    tr, td {
-        height: 25px;
-        border: 1px solid black;
-        font-size: 10px;
-        font-weight: bold;
+    tr, td, th{
+        height: 20px;
+        border: 1px solid #03001C;
+        font-size: 15px;
     }
     .header {
         text-align: center;
-        font-size: 10px;
     }
     button {
-        height: 40px;
-        width: 40px;
-        font-family: 'Alkatra', cursive;
-        border-radius: 30px;
-        background-color: #F9F5EB;
+        width: 30px;
+        height: 30px;
+        font-family: 'Open Sans', sans-serif;
         font-size: 15px;
+        background-color: #F9F5EB;
     }
     .screen {
-        margin: 20px;
+        
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         
     }
-    .display {
-        height: 30px;
-        margin-left: 20px;
-        font-family: 'Alkatra', cursive;
-        border-radius: 30px;
-        text-align: center;
+    .display.display {
+        height: 15px;
+        width: 70px;
+        margin-left: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
         background-color: #F9F5EB;
+    }
+    
+    .display.go, .display.erase {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+    
+    .buttons {
+        display: grid;
+        text-align: center;
+        grid-gap: 10px;
+        gap: 10px;
     }
   }
 
