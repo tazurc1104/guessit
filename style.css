@@ -1,0 +1,122 @@
+
+html {
+    background-color: #BBD6B8;
+    font-family: 'Alkatra', cursive;
+}
+th {
+    padding: 20px;
+    border: 1px solid black;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    background-color: #AEC2B6;
+    border-radius: 30px;
+  }
+
+table {
+    border: 1px solid #245953;
+    text-align: center;
+}
+
+tr, td {
+    height: 40px;
+    border: 1px solid black;
+}
+.header {
+    text-align: center;
+}
+button {
+    height: 44px;
+    width: 44px;
+    font-family: 'Alkatra', cursive;
+    border-radius: 30px;
+    background-color: #F9F5EB;
+}
+.screen {
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.display {
+    height: 30px;
+    margin-left: 20px;
+    font-family: 'Alkatra', cursive;
+    border-radius: 30px;
+    text-align: center;
+    background-color: #F9F5EB;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    html {
+        background-color: #BBD6B8;
+        font-family: 'Alkatra', cursive;
+    }
+    th {
+        padding: 20px;
+        border: 1px solid black;
+    }
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px;
+        background-color: #AEC2B6;
+        border-radius: 30px;
+      }
+    
+    table {
+        border: 1px solid #245953;
+        text-align: center;
+    }
+    
+    tr, td {
+        height: 25px;
+        border: 1px solid black;
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .header {
+        text-align: center;
+        font-size: 10px;
+    }
+    button {
+        height: 30px;
+        width: 30px;
+        font-family: 'Alkatra', cursive;
+        border-radius: 30px;
+        background-color: #F9F5EB;
+        font-size: 10px;
+    }
+    .screen {
+        margin: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .display {
+        height: 30px;
+        margin-left: 20px;
+        font-family: 'Alkatra', cursive;
+        border-radius: 30px;
+        text-align: center;
+        background-color: #F9F5EB;
+    }
+  }
+
