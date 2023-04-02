@@ -11,7 +11,7 @@ var countOfCorrectNum = 0;
 var countOfCorrectPositions = 0;
 
 var randomNum = "";
-var digits = "123456789";
+var digits = "0123456789";
 
 for (var i = 0; i < 4; i++) {
   var index = Math.floor(Math.random() * digits.length);
@@ -32,6 +32,7 @@ for (var i = 0; i < numButtons.length; i++) {
     (function(index) {
       numButtons[index].addEventListener("click", function() {
         if (numDisplay.value.length <= 3){
+            
             numDisplay.value = numDisplay.value + numButtons[index].innerHTML;
         }
       });
@@ -45,34 +46,38 @@ eraseButton.addEventListener("click", function(){
 })
 
 goButton.addEventListener("click", function(){
-  tableData[numData].textContent = numDisplay.value;
-  numData = numData + 3;
-  inputNum = numDisplay.value.toString();
-  for (var i = 0; i < randomNumber.length; i++) {
-    if (inputNum.indexOf(randomNumber[i]) !== -1) {
-      countOfCorrectNum++;
+
+  if (numDisplay.value.length === 4){
+    tableData[numData].textContent = numDisplay.value;
+    numData = numData + 3;
+    inputNum = numDisplay.value.toString();
+    for (var i = 0; i < randomNumber.length; i++) {
+      if (inputNum.indexOf(randomNumber[i]) !== -1) {
+        countOfCorrectNum++;
+      }
+      if (inputNum[i] === randomNumber[i]){
+        countOfCorrectPositions++;
+      }
     }
-    if (inputNum[i] === randomNumber[i]){
-      countOfCorrectPositions++;
+    
+    tableData[correctNumData].textContent = countOfCorrectNum;
+    tableData[correctPositionData].textContent = countOfCorrectPositions;
+    if (countOfCorrectNum === 4 && countOfCorrectPositions === 4) {
+      header.innerHTML = "You Won!";
+    
+      setTimeout(function() {
+        
+        location.reload();
+      }, 2000); 
     }
+    correctNumData = correctNumData + 3;
+    countOfCorrectNum = 0;
+    
+    
+    correctPositionData = correctPositionData + 3;
+    countOfCorrectPositions = 0;
+    numDisplay.value = "";
   }
   
-  tableData[correctNumData].textContent = countOfCorrectNum;
-  tableData[correctPositionData].textContent = countOfCorrectPositions;
-  if (countOfCorrectNum === 4 && countOfCorrectPositions === 4) {
-    header.innerHTML = "You Won!";
-  
-    setTimeout(function() {
-      
-      location.reload();
-    }, 2000); 
-  }
-  correctNumData = correctNumData + 3;
-  countOfCorrectNum = 0;
-  
-  
-  correctPositionData = correctPositionData + 3;
-  countOfCorrectPositions = 0;
-  numDisplay.value = "";
   
 })
