@@ -95,12 +95,12 @@ button {
         font-size: 10px;
     }
     button {
-        height: 33px;
-        width: 33px;
+        height: 40px;
+        width: 40px;
         font-family: 'Alkatra', cursive;
         border-radius: 30px;
         background-color: #F9F5EB;
-        font-size: 12px;
+        font-size: 15px;
     }
     .screen {
         margin: 20px;
