@@ -29,16 +29,16 @@ for (var i = 0; i < 4; i++) {
 var randomNumber = randomNum.toString();
 for (var i = 0; i < numButtons.length; i++) {
 
-    (function(index) {
-      numButtons[index].addEventListener("click", function() {
-        if (numDisplay.value.length <= 3){
-            
-            numDisplay.value = numDisplay.value + numButtons[index].innerHTML;
-        }
-      });
-  
-    })(i);
-  }
+  (function(index) {
+    numButtons[index].addEventListener("click", function() {
+      if (numDisplay.value.length <= 3 && numDisplay.value.indexOf(numButtons[index].innerHTML) === -1){
+        numDisplay.value = numDisplay.value + numButtons[index].innerHTML;
+      }
+    });
+
+  })(i);
+}
+
 
 eraseButton.addEventListener("click", function(){
     
